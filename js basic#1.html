@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭버튼-스타크래프트</title>
+</head>
+<body>
+    <img id="wraith" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FnrNXH%2FbtrI3xs4jc3%2FxLSKTFXuKbnDnA40KUnyJ1%2Fimg.png" alt="레이스(wraith)">
+    <img id="cloaking" onclick="hide()" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc5FBz9%2FbtrIZ6XNerM%2F5Z05ACpfiBsqZj0KFTIBwk%2Fimg.png" alt="클로킹" > 
+    <script>
+        function hide(){
+            let status = document.getElementById("wraith").style.visibility ;
+               
+            if(status == ""){
+            document.getElementById("wraith").style.visibility = "hidden"   
+        } else if(status == "hidden"){
+            document.getElementById("wraith").style.visibility = ""
+        }
+    }
+        </script> 
+</body>
+</html>
