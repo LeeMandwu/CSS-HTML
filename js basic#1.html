@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>클릭버튼-스타크래프트</title>
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style> #wraith{animation-iteration-count : infinite ; animation-duration: 0.5s; animation-delay: 0.1s; }
+    div{width: 100%; margin: 20px;</style>
 </head>
 <body>
-    <img id="wraith" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FnrNXH%2FbtrI3xs4jc3%2FxLSKTFXuKbnDnA40KUnyJ1%2Fimg.png" alt="레이스(wraith)">
+    <img id="wraith" class ="animate__animated animate__rubberBand" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FnrNXH%2FbtrI3xs4jc3%2FxLSKTFXuKbnDnA40KUnyJ1%2Fimg.png" alt="레이스(wraith)">
+    <div>
     <img id="cloaking" onclick="hide()" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc5FBz9%2FbtrIZ6XNerM%2F5Z05ACpfiBsqZj0KFTIBwk%2Fimg.png" alt="클로킹" > 
+    <div>
     <script>
         function hide(){
             let status = document.getElementById("wraith").style.visibility ;
