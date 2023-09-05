@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>오늘의 대구 날씨</h1>
+    <button onclick="getWeather()">날씨 가져오기</button>
+    <p id="temperature"></p> 
+    <script>
+        function getWeather(){
+            fetch('http://goweather.herokuapp.com/weather/Deagu') 
+             .then((response) => response.json())
+             .then((data) => {
+            document.getElementById("temperature").innerHTML=
+            data["temperature"];
+            });
+        }
+    </script>
+</body>
+</html>
