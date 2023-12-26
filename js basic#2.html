@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style></style>
 </head>
-<body>
-    <h1>오늘의 대구 날씨</h1>
-    <button onclick="getWeather()">날씨 가져오기</button>
-    <p id="temperature"></p> 
+<body style="background-color: rgb(253, 252, 216);">
+    <div style = "text-align: center ; top:50%; left:50%; transform:translate(-50%,-50%) ; position : absolute;">
+        <h1>오늘의 날씨</h1>
+        <input id="city" type="text" value="">
+        <button onclick="getWeather()">날씨 가져오기</button>
+        <p id="temperature"></p>
+    </div>
+
     <script>
         function getWeather(){
-            fetch('http://goweather.herokuapp.com/weather/Deagu') 
+            let city = document.getElementById("city").value ;
+            fetch('http://goweather.herokuapp.com/weather/'+city) 
              .then((response) => response.json())
              .then((data) => {
             document.getElementById("temperature").innerHTML=
             data["temperature"];
             });
-        }
+        } 
     </script>
 </body>
 </html>
