@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>백엔드 낫마스 2</title>
+    <title>DB없이 일회용 댓글창 만들기</title>
 </head>
 <body>
-    <h1>ㅎㅇㅇ 여기에 js 적으면 됨 편함</h1>
-    <h2><%= num %></h2>
+    <h1>댓글 목록</h1>
+    <% for ( comment of comments) { %>
+        <ul style="list-style-type:circle;">
+        <li> <%="댓글" %> : <%= comment %></li> 
+        </ul>
+    <% } %>
+        <hr>
+    <form action="/create" method="post">
+        <input type="text" id="lname" name="content"><br><br>
+        <input type="submit" value="Submit">
+      </form>
 </body>
 </html>
