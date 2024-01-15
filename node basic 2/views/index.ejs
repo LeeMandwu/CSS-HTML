@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DB없이 일회용 댓글창 만들기</title>
+    <title>CRUD 게시판</title>
 </head>
 <body>
     <h1>댓글 목록</h1>
+    <ul>
     <% for ( comment of comments) { %>
-        <ul style="list-style-type:circle;">
-        <li> <%="댓글" %> : <%= comment %></li> 
-        </ul>
-    <% } %>
-        <hr>
+        <li> <%= comment.content %></li> 
+        <form action="/update/<%= comment.id %>" method="post">
+            <input type="text" name="content">
+            <input type="submit" value="수정">
+        </form> 
+
+        <form action="/delete/<%= comment.id %>" method="post">
+            <input type="submit" value="삭제">
+        </form> <% } %>      
+      </ul>    
+    <hr>
     <form action="/create" method="post">
-        <input type="text" id="lname" name="content"><br><br>
+        <input type="text" name="content"><br><br>
         <input type="submit" value="Submit">
-      </form>
+    </form>
 </body>
 </html>
